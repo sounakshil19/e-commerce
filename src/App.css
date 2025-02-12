@@ -1,0 +1,13 @@
+body {
+  padding: 20px;
+  display: inline-block;
+  padding-left: 60px;
+}
+
+
+.App {
+  text-align: center;
+}
+.Modal{
+  border-radius: 5px;
+}
