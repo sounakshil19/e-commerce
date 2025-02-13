@@ -12,7 +12,7 @@ const CardList = ({ id, title, price, category, image, description }) => {
   const cart = useSelector(state => state.cart.cart); 
 
   
-  const isItemInCart = cart.some(item => item._id === id);
+  const isItemInCart = cart.find(item => item._id === id);
 
   const handlecart = (item) => {
     dispatch(addtocart(item));
