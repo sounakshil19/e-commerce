@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addtocart } from '../Rdux-Toolkit/Slice/cartslice';
 
-const CardList = ({ id, title, price, category, image, description }) => {
+const CardList = ({ id, title, price, category, image, description,rating }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ const CardList = ({ id, title, price, category, image, description }) => {
     setOpen(false);
   };
 
-  const item = { _id: id, title, price, category, image, description };
+  const item = { _id: id, title, price, category, image, description,rating };
 
   return (
     <>
@@ -91,6 +91,7 @@ const CardList = ({ id, title, price, category, image, description }) => {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <b>Category: {category}</b>
+            <b>Rating: {rating.rate}</b>
           </Typography>
         </DialogContent>
         <DialogActions>
